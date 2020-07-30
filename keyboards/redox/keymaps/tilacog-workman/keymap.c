@@ -8,19 +8,20 @@
 #define KC_TABOS LGUI_T(KC_TAB)     // Tap: Tab        , hold: Super
 #define KC_BSSL LT(_SYMB, KC_BSPC)  // Tap: Backspace  , hold: Symbol layer
 #define KC_LSHM LSFT_T(KC_HOME)     // Tap: Home       , hold: Left Shift
+#define KC_LASP LALT_T(KC_SPC)      // Tap: Space      , hold: Left Alt
+#define KC_RASP RALT_T(KC_SPC)      // Tap: Space      , hold: Right Alt
 #define KC_PUSL LT(_SYMB, KC_PGUP)  // Tap: Page Up    , hold: Symbol layer
 #define KC_PDSL LT(_SYMB, KC_PGDN)  // Tap: Page Down  , hold: Symbol layer
 #define KC_TBSL LT(_SYMB, KC_TAB)   // Tap: Tab        , hold: Symbol layer
 #define KC_UNSL LT(_SYMB, KC_UNDS)  // Tap: Underscore , hold: Symbol layer
 #define KC_ENSL LT(_SYMB, KC_END)   // Tap: End        , hold: Symbol layer
-#define KC_LASP LALT_T(KC_SPC)      // Tap: Space      , hold: Left Alt
-#define KC_RASP RALT_T(KC_SPC)      // Tap: Space      , hold: Right Alt
+#define KC_GESL LT(_SYMB, KC_GESC)  // Tap: Esc-Grave  , hold: Symbol layer
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {  // clang-format off
 
   [_WORKMAN] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                                           ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     KC_GESC ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,                                            KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_MINS ,
+     KC_GESL ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,                                            KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_MINS ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_TABOS,KC_Q    ,KC_D    ,KC_R    ,KC_W    ,KC_B    ,KC_BSPC ,                          KC_DEL  ,KC_J    ,KC_F    ,KC_U    ,KC_P    ,KC_SCLN ,KC_EQL  ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
@@ -28,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {  // clang-format 
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSHM ,KC_Z    ,KC_X    ,KC_M    ,KC_C    ,KC_V    ,KC_PDSL ,KC_PDSL ,        KC_TBSL ,KC_UNSL ,KC_K    ,KC_L    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_BSLS ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     KC_ENSL ,KC_AT   ,KC_DLR  ,KC_LCTL ,     KC_LASP ,    KC_ENT   ,KC_LCPO,        KC_BSPC ,KC_ENT  ,    KC_RASP ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
+     KC_ENSL ,KC_AT   ,XXXXXXX ,XXXXXXX ,     KC_LASP ,    KC_LCPO ,KC_ENT  ,        KC_ENT  ,KC_BSPC ,    KC_RASP ,     KC_UP   ,KC_DOWN ,KC_LEFT ,KC_RGHT
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
 ),
 
