@@ -7,7 +7,6 @@
 // Shortcut to make keymap more readable
 #define KC_TABOS LGUI_T(KC_TAB)      // Tap: Tab        , hold: Super
 #define KC_BMSL LT(_MOUSE, KC_BSPC)  // Tap: Backspace  , hold: Mouse layer
-#define KC_LSHM LSFT_T(KC_HOME)      // Tap: Home       , hold: Left Shift
 #define KC_LASP LALT_T(KC_SPC)       // Tap: Space      , hold: Left Alt
 #define KC_RASP RALT_T(KC_SPC)       // Tap: Space      , hold: Right Alt
 #define KC_PUSL LT(_SYMB, KC_PGUP)   // Tap: Page Up    , hold: Symbol layer
@@ -17,7 +16,8 @@
 
 // One Shots
 #define DEAD_SG OSM(MOD_LSFT | MOD_LGUI)  // One Shot Left Shift + Left GUI
-#define DEAD_LC OSM(MOD_LCTL)             // One Shot Left Controller
+#define DEAD_LC OSM(MOD_LCTL)             // One Shot Left Control
+#define DEAD_LS OSM(MOD_LSFT)             // One Shot Left Shift
 
 // Tap Dance
 enum {
@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {  // clang-format 
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_BMSL ,KC_A    ,KC_S    ,KC_H    ,KC_T    ,KC_G    ,KC_LBRC ,                          KC_RBRC, KC_Y    ,KC_N    ,KC_E    ,KC_O    ,KC_I    ,KC_QUOT ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSHM ,KC_Z    ,KC_X    ,KC_M    ,KC_C    ,KC_V    ,KC_PDSL ,KC_PDSL ,        KC_TBSL ,KC_UNSL ,KC_K    ,KC_L    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_BSLS ,
+     DEAD_LS ,KC_Z    ,KC_X    ,KC_M    ,KC_C    ,KC_V    ,KC_PDSL ,KC_PDSL ,        KC_TBSL ,KC_UNSL ,KC_K    ,KC_L    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_BSLS ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
      TD_HE   ,KC_AT   ,DEAD_SG ,DEAD_LC ,     KC_LASP ,    KC_LCPO ,KC_ENT  ,        KC_ENT  ,KC_BSPC ,    KC_RASP ,     KC_UP   ,KC_DOWN ,KC_LEFT ,KC_RGHT
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
