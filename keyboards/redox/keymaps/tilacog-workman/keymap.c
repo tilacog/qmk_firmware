@@ -15,9 +15,10 @@
 #define KC_UNSL LT(_SYMB, KC_UNDS)   // Tap: Underscore , hold: Symbol layer
 
 // One Shots
-#define DEAD_SG OSM(MOD_LSFT | MOD_LGUI)  // One Shot Left Shift + Left GUI
-#define DEAD_LC OSM(MOD_LCTL)             // One Shot Left Control
-#define DEAD_LS OSM(MOD_LSFT)             // One Shot Left Shift
+#define DEAD_LA OSM(MOD_LALT)
+#define DEAD_LG OSM(MOD_LGUI)
+#define DEAD_LC OSM(MOD_LCTL)
+#define DEAD_LS OSM(MOD_LSFT)
 
 // Tap Dance
 enum {
@@ -42,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {  // clang-format 
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      DEAD_LS ,KC_Z    ,KC_X    ,KC_M    ,KC_C    ,KC_V    ,KC_PDSL ,KC_PDSL ,        KC_TBSL ,KC_UNSL ,KC_K    ,KC_L    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_BSLS ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     TD_HE   ,KC_AT   ,DEAD_SG ,DEAD_LC ,     KC_LASP ,    KC_LCPO ,KC_ENT  ,        KC_ENT  ,KC_BSPC ,    KC_RASP ,     KC_UP   ,KC_DOWN ,KC_LEFT ,KC_RGHT
+     TD_HE   ,XXXXXXX ,DEAD_LG ,DEAD_LA ,     KC_LASP ,    DEAD_LC ,KC_ENT  ,        KC_ENT  ,KC_BSPC ,    KC_RASP ,     KC_UP   ,KC_DOWN ,KC_LEFT ,KC_RGHT
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
 ),
 
