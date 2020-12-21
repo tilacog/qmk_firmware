@@ -22,15 +22,9 @@
 #define OS_SYMB OSL(_SYMB)
 
 // Tap Dance
-enum {
-    TD_HOME_END,
-};
-
-qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_HOME_END] = ACTION_TAP_DANCE_DOUBLE(KC_HOME, KC_END),
-};
-
-#define TD_HE TD(TD_HOME_END)
+#include "tapdance.c"
+#define TD_HE TD(TD_HOME_END)  // tap: HOME, 2 taps: END
+#define TD_RSFT TD(RSFT_RP)    // tap:: `)`, hold: RSFT, 2 taps: `))`
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {  // clang-format off
 
@@ -42,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {  // clang-format 
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      BSPC_LOW,KC_A    ,KC_S    ,KC_H    ,KC_T    ,KC_G    ,KC_DLSL ,                          KC_BSSL ,KC_Y    ,KC_N    ,KC_E    ,KC_O    ,KC_I    ,KC_QUOT ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSPO ,KC_Z    ,KC_X    ,KC_M    ,KC_C    ,KC_V    ,KC_PUSL ,KC_PDSL ,        KC_TBSL ,KC_UNSL ,KC_K    ,KC_L    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_RSPC ,
+     KC_LSPO ,KC_Z    ,KC_X    ,KC_M    ,KC_C    ,KC_V    ,KC_PUSL ,KC_PDSL ,        KC_TBSL ,KC_UNSL ,KC_K    ,KC_L    ,KC_COMM ,KC_DOT  ,KC_SLSH ,TD_RSFT ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
      TD_HE   ,SFT_GUI ,XXXXXXX ,KC_BSLS ,     KC_LASP ,    KC_LCTRL,ENT_SL  ,        KC_ENT  ,OS_SYMB ,    KC_RASP ,     KC_UP   ,KC_DOWN ,KC_LEFT ,KC_RGHT
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
