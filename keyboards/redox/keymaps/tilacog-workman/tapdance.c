@@ -71,5 +71,5 @@ void rsft_rp_reset(qk_tap_dance_state_t *state, void *user_data) {
 // Define `ACTION_TAP_DANCE_FN_ADVANCED()` for each tapdance keycode, passing in `finished` and `reset` functions
 qk_tap_dance_action_t tap_dance_actions[] = {  // clang-format off
   [TD_HOME_END] = ACTION_TAP_DANCE_DOUBLE(KC_HOME, KC_END),
-  [RSFT_RP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, rsft_rp_finished, rsft_rp_reset)
+  [RSFT_RP] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, rsft_rp_finished, rsft_rp_reset, 75)
 };  // clang-format on
