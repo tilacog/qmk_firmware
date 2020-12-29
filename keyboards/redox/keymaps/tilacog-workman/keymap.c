@@ -15,8 +15,8 @@
 #define KC_PDSL LT(_SYMB, KC_PGDN)    // Tap: Page Down  , hold: Symbol layer
 #define KC_TBSL LT(_SYMB, KC_TAB)     // Tap: Tab        , hold: Symbol layer
 #define KC_UNSL LT(_SYMB, KC_UNDS)    // Tap: Underscore , hold: Symbol layer
-#define ENT_SL LT(_SYMB, KC_ENT)      // Tap: Enter      , hold: Symbol layer
 #define SFT_GUI LSFT(KC_LGUI)
+#define LALT_X LALT(KC_X)
 
 // One Shots
 #define OS_SYMB OSL(_SYMB)
@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {  // clang-format 
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSPO ,KC_Z    ,KC_X    ,KC_M    ,KC_C    ,KC_V    ,KC_PUSL ,KC_PDSL ,        KC_TBSL ,KC_UNSL ,KC_K    ,KC_L    ,KC_COMM ,KC_DOT  ,KC_SLSH ,TD_RSFT ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     TD_HE   ,SFT_GUI ,XXXXXXX ,KC_BSLS ,     KC_LASP ,    KC_LCTRL,ENT_SL  ,        KC_ENT  ,OS_SYMB ,    KC_RASP ,     KC_UP   ,KC_DOWN ,KC_LEFT ,KC_RGHT
+     TD_HE   ,SFT_GUI ,LALT_X  ,KC_BSLS ,     KC_LASP ,    KC_LCTRL,KC_ENT  ,        KC_ENT  ,OS_SYMB ,    KC_RASP ,     KC_UP   ,KC_DOWN ,KC_LEFT ,KC_RGHT
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
 ),
 
