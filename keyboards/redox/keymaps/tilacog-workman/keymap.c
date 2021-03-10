@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {  // clang-format 
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSPO ,KC_Z    ,KC_X    ,KC_M    ,KC_C    ,KC_V    ,KC_PUSL ,KC_PDSL ,        KC_TBSL ,KC_UNSL ,KC_K    ,KC_L    ,KC_COMM ,KC_DOT  ,KC_SLSH ,TD_RSFT ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     TD_HE   ,SFT_GUI ,LALT_X  ,KC_BSLS ,     KC_LASP ,    KC_LCTRL,KC_ENT  ,        KC_ENT  ,OS_SYMB ,    KC_RASP ,     KC_UP   ,KC_DOWN ,KC_LEFT ,KC_RGHT
+     TD_HE   ,SFT_GUI ,KC_LEFT ,KC_RGHT ,     KC_LASP ,    KC_LCTRL,KC_ENT  ,        KC_ENT  ,OS_SYMB ,    KC_RASP ,     KC_UP   ,KC_DOWN ,LALT_X  ,KC_BSLS
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
 ),
 
